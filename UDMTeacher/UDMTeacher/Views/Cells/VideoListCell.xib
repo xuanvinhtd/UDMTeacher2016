@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoListCell" rowHeight="275" id="GeI-IE-9Wl" customClass="VideoListCell" customModule="UDMTeacher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="489" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GeI-IE-9Wl" id="Qyt-BX-OZl">
+                <rect key="frame" x="0.0" y="0.0" width="489" height="274"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIQ-UJ-5aB">
+                        <rect key="frame" x="213" y="8" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVt-1w-DwV">
+                        <rect key="frame" x="221" y="236" width="47" height="30"/>
+                        <state key="normal" title="See All"/>
+                    </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hAu-7s-6xB">
+                        <rect key="frame" x="8" y="37" width="473" height="191"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hAu-7s-6xB" secondAttribute="trailing" constant="8" id="1CX-yf-Lff"/>
+                    <constraint firstItem="GVt-1w-DwV" firstAttribute="centerX" secondItem="Qyt-BX-OZl" secondAttribute="centerX" id="FK6-gg-16T"/>
+                    <constraint firstAttribute="bottom" secondItem="GVt-1w-DwV" secondAttribute="bottom" constant="8" id="RIU-Oz-1xx"/>
+                    <constraint firstItem="hAu-7s-6xB" firstAttribute="top" secondItem="XIQ-UJ-5aB" secondAttribute="bottom" constant="8" id="bG4-8o-Yrc"/>
+                    <constraint firstItem="XIQ-UJ-5aB" firstAttribute="top" secondItem="Qyt-BX-OZl" secondAttribute="top" constant="8" id="fA4-VJ-0YM"/>
+                    <constraint firstItem="hAu-7s-6xB" firstAttribute="leading" secondItem="Qyt-BX-OZl" secondAttribute="leading" constant="8" id="hsB-Wo-DZs"/>
+                    <constraint firstItem="GVt-1w-DwV" firstAttribute="top" secondItem="hAu-7s-6xB" secondAttribute="bottom" constant="8" id="nJn-k1-cGj"/>
+                    <constraint firstItem="XIQ-UJ-5aB" firstAttribute="centerX" secondItem="Qyt-BX-OZl" secondAttribute="centerX" id="ync-CN-cXx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="seeAllBtn" destination="GVt-1w-DwV" id="AQA-AL-7E2"/>
+                <outlet property="tableView" destination="hAu-7s-6xB" id="BPC-Jy-TXg"/>
+            </connections>
+            <point key="canvasLocation" x="504.5" y="347.5"/>
+        </tableViewCell>
+    </objects>
+</document>

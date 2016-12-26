@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (3.4.1)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - Cosmos (1.2.3)
+  - ReachabilitySwift (2.4)
+  - XCGLogger (3.5.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - ChameleonFramework/Swift
+  - Cosmos (~> 1.2)
+  - ReachabilitySwift (~> 2.4)
+  - XCGLogger (~> 3.5.3)
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Cosmos: efddd01b729956ad6335bc58bc92e5735a1d12a3
+  ReachabilitySwift: dc7452dab85ff881904215e1a113326ad8d07beb
+  XCGLogger: dbe4a9c7bbaac73717a34e0b94c64fd151c74d6c
+
+PODFILE CHECKSUM: 575a873772683d0942fe9e82cbf2c8a65ed59ab1
+
+COCOAPODS: 1.0.0

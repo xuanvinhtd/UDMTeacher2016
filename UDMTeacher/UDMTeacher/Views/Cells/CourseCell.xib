@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" rowHeight="134" id="OXD-Cd-SeS" customClass="CourseCell" customModule="UDMTeacher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="134"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OXD-Cd-SeS" id="vN6-j0-6rV">
+                <rect key="frame" x="0.0" y="0.0" width="527" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagedefault" translatesAutoresizingMaskIntoConstraints="NO" id="KlS-0A-Y9C">
+                        <rect key="frame" x="8" y="8" width="170" height="117"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="170" id="LXw-ww-jIR"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEE-F9-Alo" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="186" y="33" width="120" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                <color key="value" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                <color key="value" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                <color key="value" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGG-dB-drl">
+                        <rect key="frame" x="186" y="8" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVK-mI-CPX">
+                        <rect key="frame" x="186" y="85" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.68888300660000001" green="0.71366006140000005" blue="0.73448425530000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAC-yR-SyF">
+                        <rect key="frame" x="227" y="109" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.68888300660000001" green="0.71366006140000005" blue="0.73448425530000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlA-Qw-qNa">
+                        <rect key="frame" x="186" y="109" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WGG-dB-drl" firstAttribute="leading" secondItem="KlS-0A-Y9C" secondAttribute="trailing" constant="8" id="ALF-qh-PjE"/>
+                    <constraint firstItem="mlA-Qw-qNa" firstAttribute="leading" secondItem="WGG-dB-drl" secondAttribute="leading" id="Awi-cK-Ir8"/>
+                    <constraint firstItem="KlS-0A-Y9C" firstAttribute="leading" secondItem="vN6-j0-6rV" secondAttribute="leading" constant="8" id="C7w-nS-6Y7"/>
+                    <constraint firstItem="NAC-yR-SyF" firstAttribute="leading" secondItem="mlA-Qw-qNa" secondAttribute="trailing" constant="8" id="HWe-ho-j9R"/>
+                    <constraint firstItem="WGG-dB-drl" firstAttribute="top" secondItem="KlS-0A-Y9C" secondAttribute="top" id="Mm7-mU-0Xy"/>
+                    <constraint firstItem="NAC-yR-SyF" firstAttribute="leading" secondItem="mlA-Qw-qNa" secondAttribute="trailing" constant="8" id="Rrq-py-fkW"/>
+                    <constraint firstItem="mlA-Qw-qNa" firstAttribute="top" secondItem="aVK-mI-CPX" secondAttribute="bottom" constant="8" id="Shi-JG-apU"/>
+                    <constraint firstItem="NAC-yR-SyF" firstAttribute="baseline" secondItem="mlA-Qw-qNa" secondAttribute="baseline" id="YTw-le-403"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="NAC-yR-SyF" secondAttribute="trailing" constant="10" id="b1A-Ho-gk6"/>
+                    <constraint firstItem="mlA-Qw-qNa" firstAttribute="leading" secondItem="aVK-mI-CPX" secondAttribute="leading" id="cpW-UR-zWl"/>
+                    <constraint firstItem="mlA-Qw-qNa" firstAttribute="bottom" secondItem="KlS-0A-Y9C" secondAttribute="bottom" id="mCT-A8-5np"/>
+                    <constraint firstItem="eEE-F9-Alo" firstAttribute="leading" secondItem="WGG-dB-drl" secondAttribute="leading" id="tBa-mo-AAr"/>
+                    <constraint firstItem="KlS-0A-Y9C" firstAttribute="top" secondItem="vN6-j0-6rV" secondAttribute="top" constant="8" id="tsX-aW-UxD"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="WGG-dB-drl" secondAttribute="trailing" constant="10" id="up8-rg-oCF"/>
+                    <constraint firstItem="eEE-F9-Alo" firstAttribute="top" secondItem="WGG-dB-drl" secondAttribute="bottom" constant="8" id="yaT-Gd-E6m"/>
+                    <constraint firstAttribute="bottom" secondItem="KlS-0A-Y9C" secondAttribute="bottom" constant="8" id="zs8-12-DsU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="courseImage" destination="KlS-0A-Y9C" id="DCg-3d-Nt0"/>
+                <outlet property="moneyNew" destination="mlA-Qw-qNa" id="Mlq-nu-Ib5"/>
+                <outlet property="moneyOld" destination="NAC-yR-SyF" id="MYl-8z-VC6"/>
+                <outlet property="ratingControl" destination="eEE-F9-Alo" id="96P-Pn-Ew8"/>
+                <outlet property="teacherName" destination="aVK-mI-CPX" id="Ujs-Bj-Cg7"/>
+                <outlet property="title" destination="WGG-dB-drl" id="2ir-8Y-EaN"/>
+            </connections>
+            <point key="canvasLocation" x="447.5" y="212"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Imagedefault" width="311" height="207"/>
+    </resources>
+</document>

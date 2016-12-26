@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewsCell" rowHeight="222" id="t1e-pP-o6v" customClass="ReviewsCell" customModule="UDMTeacher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="531" height="222"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t1e-pP-o6v" id="5Lf-M8-eFR">
+                <rect key="frame" x="0.0" y="0.0" width="531" height="221"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46k-g9-bJa">
+                        <rect key="frame" x="234" y="8" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B3k-ru-vQ7">
+                        <rect key="frame" x="8" y="37" width="515" height="138"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6A-HT-QLs">
+                        <rect key="frame" x="242" y="183" width="47" height="30"/>
+                        <state key="normal" title="See All"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F6A-HT-QLs" firstAttribute="top" secondItem="B3k-ru-vQ7" secondAttribute="bottom" constant="8" id="2yw-s8-n6d"/>
+                    <constraint firstItem="B3k-ru-vQ7" firstAttribute="top" secondItem="46k-g9-bJa" secondAttribute="bottom" constant="8" id="9fe-ne-wce"/>
+                    <constraint firstAttribute="trailing" secondItem="B3k-ru-vQ7" secondAttribute="trailing" constant="8" id="DLU-6b-TQC"/>
+                    <constraint firstItem="46k-g9-bJa" firstAttribute="centerX" secondItem="5Lf-M8-eFR" secondAttribute="centerX" id="NTZ-X7-VIa"/>
+                    <constraint firstAttribute="bottom" secondItem="F6A-HT-QLs" secondAttribute="bottom" constant="8" id="exF-LF-0qD"/>
+                    <constraint firstItem="46k-g9-bJa" firstAttribute="top" secondItem="5Lf-M8-eFR" secondAttribute="top" constant="8" id="mmf-gg-2Xa"/>
+                    <constraint firstItem="B3k-ru-vQ7" firstAttribute="leading" secondItem="5Lf-M8-eFR" secondAttribute="leading" constant="8" id="nG3-Js-jdn"/>
+                    <constraint firstItem="F6A-HT-QLs" firstAttribute="centerX" secondItem="5Lf-M8-eFR" secondAttribute="centerX" id="txJ-v4-bZb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="seeAllBtn" destination="F6A-HT-QLs" id="PT4-9T-Qoo"/>
+                <outlet property="tableView" destination="B3k-ru-vQ7" id="tlR-PF-1n6"/>
+            </connections>
+            <point key="canvasLocation" x="349.5" y="388"/>
+        </tableViewCell>
+    </objects>
+</document>
