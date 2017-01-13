@@ -10,14 +10,14 @@ import Foundation
 
 extension String {
     
-    func formatDateFromString(value: String) -> String? {
+    func formatDateFromString() -> String? {
         
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        if value == "" {
+        if self == "" {
             return "2016/01/01"
         }
-        let someDateTime = formatter.dateFromString(value)
+        let someDateTime = formatter.dateFromString(self)
         
         formatter.dateFormat = UDMConfig.formatDate
         

@@ -19,14 +19,13 @@ class UserManager {
     
     func getInfos() -> [String: String?] {
         var data: [String: String?] = [:]
-        data["FullName"] = info.fullName
-        data["Email"] = info.email
-        data["Sex"] = info.sex
-        data["BirthDay"] = info.birthday.formatDateFromString(info.birthday)
-        data["City"] = info.city
-        data["Phone Number"] = info.phoneNumber
         data["Description"] = info.description
-        data["Money"] = String(info.money)
+        data["Wallet"] = String(info.money) + "VND"
+        data["Local"] = info.city
+        data["Phone Number"] = info.phoneNumber
+        data["Email"] = info.email
+        data["BirthDay"] = info.birthday.formatDateFromString()
+        
         
         return data
     }

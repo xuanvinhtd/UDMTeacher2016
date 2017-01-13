@@ -16,7 +16,6 @@
 		4A2B80FC1E0E3C86005D0A72 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2B80FB1E0E3C86005D0A72 /* UserManager.swift */; };
 		4A3961F71E0E16AF00F4A7A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3961F61E0E16AF00F4A7A4 /* AppDelegate.swift */; };
 		4A3961FC1E0E16AF00F4A7A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3961FA1E0E16AF00F4A7A4 /* Main.storyboard */; };
-		4A3961FE1E0E16AF00F4A7A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3961FD1E0E16AF00F4A7A4 /* Assets.xcassets */; };
 		4A3962011E0E16AF00F4A7A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3961FF1E0E16AF00F4A7A4 /* LaunchScreen.storyboard */; };
 		4A39620F1E0E1AC800F4A7A4 /* UIViewController+UDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39620E1E0E1AC800F4A7A4 /* UIViewController+UDM.swift */; };
 		4A3962151E0E234800F4A7A4 /* String+UDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3962141E0E234800F4A7A4 /* String+UDM.swift */; };
@@ -29,6 +28,8 @@
 		4A612BE71E0EDE24002639B1 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A612BE61E0EDE24002639B1 /* Course.swift */; };
 		4A612BE91E0EF03B002639B1 /* UDMDictionaryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A612BE81E0EF03B002639B1 /* UDMDictionaryBuilder.swift */; };
 		4A612BEB1E0EF269002639B1 /* Dictionary+UDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A612BEA1E0EF269002639B1 /* Dictionary+UDM.swift */; };
+		4AA1877D1E12B2DC008B5D8E /* Curruculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1877C1E12B2DC008B5D8E /* Curruculum.swift */; };
+		4AA1877F1E12B953008B5D8E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1877E1E12B953008B5D8E /* Review.swift */; };
 		4AA667871E0FB81B003163A3 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA667861E0FB81B003163A3 /* libstdc++.6.0.9.tbd */; };
 		4AA667891E0FB860003163A3 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA667881E0FB860003163A3 /* libiconv.2.4.0.tbd */; };
 		4AA6678B1E0FBAC9003163A3 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6678A1E0FBAC9003163A3 /* CourseDetailViewController.swift */; };
@@ -40,6 +41,7 @@
 		4AA667971E0FC6B3003163A3 /* VideoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA667961E0FC6B3003163A3 /* VideoListCell.xib */; };
 		4AA667991E0FD13E003163A3 /* ReviewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA667981E0FD13E003163A3 /* ReviewsCell.xib */; };
 		4AA6679B1E0FD25D003163A3 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6679A1E0FD25D003163A3 /* ReviewsCell.swift */; };
+		4AC5DDB51E26595B00C3A86F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5DDB41E26595B00C3A86F /* Assets.xcassets */; };
 		4ACDB6F81E10068E0050A60C /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDB6F71E10068E0050A60C /* ListItemViewController.swift */; };
 		4ACDB6FC1E100A180050A60C /* ReviewCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDB6FB1E100A180050A60C /* ReviewCourseCell.swift */; };
 		4ACDB6FE1E100A280050A60C /* ReviewCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACDB6FD1E100A280050A60C /* ReviewCourseCell.xib */; };
@@ -49,12 +51,28 @@
 		4ADB405A1E0F684B00A783DC /* UDMHUB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB40591E0F684B00A783DC /* UDMHUB.swift */; };
 		4ADB405C1E0F7D1500A783DC /* StreamVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB405B1E0F7D1500A783DC /* StreamVideoViewController.swift */; };
 		4ADB405E1E0F89FB00A783DC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB405D1E0F89FB00A783DC /* Bolts.framework */; };
-		4ADB40601E0F8A3F00A783DC /* R5Streaming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB405F1E0F8A3F00A783DC /* R5Streaming.framework */; };
 		4ADB40621E0F8A7800A783DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB40611E0F8A7800A783DC /* QuartzCore.framework */; };
 		4ADB40641E0F8A8900A783DC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB40631E0F8A8900A783DC /* OpenAL.framework */; };
 		4ADB40661E0F8A9600A783DC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB40651E0F8A9600A783DC /* CoreFoundation.framework */; };
+		4AF109A91E251D8C0044E39E /* WowzaGoCoderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF109A71E251D640044E39E /* WowzaGoCoderSDK.framework */; };
+		4AF109AA1E251D8C0044E39E /* WowzaGoCoderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF109A71E251D640044E39E /* WowzaGoCoderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AF109B21E2520550044E39E /* Wowza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF109B11E2520550044E39E /* Wowza.swift */; };
 		B03358EB8A435E882A158975 /* Pods_UDMTeacher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B898D3F766F8F7A090901A /* Pods_UDMTeacher.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4AF109AB1E251D8C0044E39E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4AF109AA1E251D8C0044E39E /* WowzaGoCoderSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		322B1AE824AF9F99D00394DA /* Pods-UDMTeacher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDMTeacher.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDMTeacher/Pods-UDMTeacher.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +86,6 @@
 		4A3961F31E0E16AF00F4A7A4 /* UDMTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDMTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3961F61E0E16AF00F4A7A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A3961FB1E0E16AF00F4A7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4A3961FD1E0E16AF00F4A7A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A3962001E0E16AF00F4A7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A3962021E0E16AF00F4A7A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A39620E1E0E1AC800F4A7A4 /* UIViewController+UDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UDM.swift"; sourceTree = "<group>"; };
@@ -82,6 +99,8 @@
 		4A612BE61E0EDE24002639B1 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		4A612BE81E0EF03B002639B1 /* UDMDictionaryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDMDictionaryBuilder.swift; sourceTree = "<group>"; };
 		4A612BEA1E0EF269002639B1 /* Dictionary+UDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+UDM.swift"; sourceTree = "<group>"; };
+		4AA1877C1E12B2DC008B5D8E /* Curruculum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curruculum.swift; sourceTree = "<group>"; };
+		4AA1877E1E12B953008B5D8E /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		4AA667861E0FB81B003163A3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		4AA667881E0FB860003163A3 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
 		4AA6678A1E0FBAC9003163A3 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +112,7 @@
 		4AA667961E0FC6B3003163A3 /* VideoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoListCell.xib; sourceTree = "<group>"; };
 		4AA667981E0FD13E003163A3 /* ReviewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewsCell.xib; sourceTree = "<group>"; };
 		4AA6679A1E0FD25D003163A3 /* ReviewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
+		4AC5DDB41E26595B00C3A86F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ACDB6F71E10068E0050A60C /* ListItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
 		4ACDB6FB1E100A180050A60C /* ReviewCourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCourseCell.swift; sourceTree = "<group>"; };
 		4ACDB6FD1E100A280050A60C /* ReviewCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCourseCell.xib; sourceTree = "<group>"; };
@@ -102,10 +122,12 @@
 		4ADB40591E0F684B00A783DC /* UDMHUB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDMHUB.swift; sourceTree = "<group>"; };
 		4ADB405B1E0F7D1500A783DC /* StreamVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamVideoViewController.swift; sourceTree = "<group>"; };
 		4ADB405D1E0F89FB00A783DC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		4ADB405F1E0F8A3F00A783DC /* R5Streaming.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = R5Streaming.framework; sourceTree = "<group>"; };
 		4ADB40611E0F8A7800A783DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4ADB40631E0F8A8900A783DC /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		4ADB40651E0F8A9600A783DC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		4AF109A71E251D640044E39E /* WowzaGoCoderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WowzaGoCoderSDK.framework; sourceTree = "<group>"; };
+		4AF109AE1E251E4F0044E39E /* UDMTeacher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UDMTeacher-Bridging-Header.h"; sourceTree = "<group>"; };
+		4AF109B11E2520550044E39E /* Wowza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wowza.swift; sourceTree = "<group>"; };
 		A4B898D3F766F8F7A090901A /* Pods_UDMTeacher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UDMTeacher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCBC0885BB134D7BC659E26 /* Pods-UDMTeacher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDMTeacher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDMTeacher/Pods-UDMTeacher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +142,8 @@
 				4ADB40661E0F8A9600A783DC /* CoreFoundation.framework in Frameworks */,
 				4ADB40641E0F8A8900A783DC /* OpenAL.framework in Frameworks */,
 				4ADB40621E0F8A7800A783DC /* QuartzCore.framework in Frameworks */,
+				4AF109A91E251D8C0044E39E /* WowzaGoCoderSDK.framework in Frameworks */,
 				B03358EB8A435E882A158975 /* Pods_UDMTeacher.framework in Frameworks */,
-				4ADB40601E0F8A3F00A783DC /* R5Streaming.framework in Frameworks */,
 				4ADB405E1E0F89FB00A783DC /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +154,7 @@
 		4A3961EA1E0E16AF00F4A7A4 = {
 			isa = PBXGroup;
 			children = (
+				4AC5DDB41E26595B00C3A86F /* Assets.xcassets */,
 				4A3961F51E0E16AF00F4A7A4 /* UDMTeacher */,
 				4A3961F41E0E16AF00F4A7A4 /* Products */,
 				E099B177AE2E666608304CAC /* Pods */,
@@ -158,9 +181,9 @@
 				4A3962081E0E16E400F4A7A4 /* ViewController */,
 				4A3961F61E0E16AF00F4A7A4 /* AppDelegate.swift */,
 				4A3961FA1E0E16AF00F4A7A4 /* Main.storyboard */,
-				4A3961FD1E0E16AF00F4A7A4 /* Assets.xcassets */,
 				4A3961FF1E0E16AF00F4A7A4 /* LaunchScreen.storyboard */,
 				4A3962021E0E16AF00F4A7A4 /* Info.plist */,
+				4AF109AE1E251E4F0044E39E /* UDMTeacher-Bridging-Header.h */,
 			);
 			path = UDMTeacher;
 			sourceTree = "<group>";
@@ -190,7 +213,7 @@
 		4A39620A1E0E175F00F4A7A4 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				4ADB405F1E0F8A3F00A783DC /* R5Streaming.framework */,
+				4AF109A71E251D640044E39E /* WowzaGoCoderSDK.framework */,
 				4ADB405D1E0F89FB00A783DC /* Bolts.framework */,
 				4A3962161E0E239100F4A7A4 /* AlamofireManager.swift */,
 			);
@@ -216,6 +239,9 @@
 			children = (
 				4A612BE41E0EDE16002639B1 /* User.swift */,
 				4A612BE61E0EDE24002639B1 /* Course.swift */,
+				4AA1877C1E12B2DC008B5D8E /* Curruculum.swift */,
+				4AA1877E1E12B953008B5D8E /* Review.swift */,
+				4AF109B11E2520550044E39E /* Wowza.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +329,7 @@
 				4A3961F11E0E16AF00F4A7A4 /* Resources */,
 				8FAA0BC181D4F4F707CB6CFF /* 📦 Embed Pods Frameworks */,
 				8E217ADE454F16DCB736DF2C /* 📦 Copy Pods Resources */,
+				4AF109AB1E251D8C0044E39E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +352,7 @@
 				TargetAttributes = {
 					4A3961F21E0E16AF00F4A7A4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WRETXPU7JD;
 					};
 				};
 			};
@@ -355,11 +383,11 @@
 				4AA667971E0FC6B3003163A3 /* VideoListCell.xib in Resources */,
 				4AA667911E0FC4B0003163A3 /* CourseDescriptionCell.xib in Resources */,
 				4A612BE11E0ECD77002639B1 /* CourseCell.xib in Resources */,
+				4AC5DDB51E26595B00C3A86F /* Assets.xcassets in Resources */,
 				4ACDB6FE1E100A280050A60C /* ReviewCourseCell.xib in Resources */,
 				4A3962011E0E16AF00F4A7A4 /* LaunchScreen.storyboard in Resources */,
 				4ACDB7001E100C5C0050A60C /* VideoItemCell.xib in Resources */,
 				4AA667991E0FD13E003163A3 /* ReviewsCell.xib in Resources */,
-				4A3961FE1E0E16AF00F4A7A4 /* Assets.xcassets in Resources */,
 				4A3961FC1E0E16AF00F4A7A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,16 +465,19 @@
 				4AA6679B1E0FD25D003163A3 /* ReviewsCell.swift in Sources */,
 				4A3962181E0E239100F4A7A4 /* AlamofireManager.swift in Sources */,
 				4ADB405A1E0F684B00A783DC /* UDMHUB.swift in Sources */,
+				4AA1877D1E12B2DC008B5D8E /* Curruculum.swift in Sources */,
 				4A612BE31E0ED46D002639B1 /* CourseCell.swift in Sources */,
 				4ACDB6F81E10068E0050A60C /* ListItemViewController.swift in Sources */,
 				4A39621B1E0E239E00F4A7A4 /* UDMConfig.swift in Sources */,
 				4A0A432B1E0EAC9300E4EDD8 /* UDMAlert.swift in Sources */,
 				4AA6678D1E0FBD72003163A3 /* VideoCourseCell.swift in Sources */,
 				4ADB405C1E0F7D1500A783DC /* StreamVideoViewController.swift in Sources */,
+				4AA1877F1E12B953008B5D8E /* Review.swift in Sources */,
 				4A3962151E0E234800F4A7A4 /* String+UDM.swift in Sources */,
 				4A0A432F1E0EB23800E4EDD8 /* InfoUserViewController.swift in Sources */,
 				4A612BE91E0EF03B002639B1 /* UDMDictionaryBuilder.swift in Sources */,
 				4A2B80FA1E0E3765005D0A72 /* UDMServer.swift in Sources */,
+				4AF109B21E2520550044E39E /* Wowza.swift in Sources */,
 				4A612BEB1E0EF269002639B1 /* Dictionary+UDM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +525,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -510,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -540,6 +572,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -550,7 +583,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -563,6 +596,9 @@
 			baseConfigurationReference = FCCBC0885BB134D7BC659E26 /* Pods-UDMTeacher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UDMTeacher/Libs",
@@ -571,6 +607,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xuanvinhtd.UDMTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UDMTeacher/UDMTeacher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -579,6 +618,9 @@
 			baseConfigurationReference = 322B1AE824AF9F99D00394DA /* Pods-UDMTeacher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/UDMTeacher/Libs",
@@ -587,6 +629,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xuanvinhtd.UDMTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UDMTeacher/UDMTeacher-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -10,6 +10,11 @@ import Foundation
 
 final class UDMConfig {
     
+    // MARK: - Stream Wowza
+    static let SDKSampleSavedConfigKey = "SDKSampleSavedConfigKey"
+    static let SDKSampleAppLicenseKey = "GSDK-F742-0003-8149-B493-F69E"
+    static let BlackAndWhiteEffectKey = "BlackAndWhiteKey"
+    
     static let isRelease = false
     // MARK: App Config
     static let formatDate = "yyyy/MM/dd"

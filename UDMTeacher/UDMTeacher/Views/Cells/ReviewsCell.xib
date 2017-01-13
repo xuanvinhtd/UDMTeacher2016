@@ -20,14 +20,17 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B3k-ru-vQ7">
-                        <rect key="frame" x="8" y="37" width="515" height="138"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </tableView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6A-HT-QLs">
                         <rect key="frame" x="242" y="183" width="47" height="30"/>
                         <state key="normal" title="See All"/>
                     </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B3k-ru-vQ7">
+                        <rect key="frame" x="8" y="37" width="515" height="138"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="vSy-wI-eaU"/>
+                        </constraints>
+                    </tableView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="F6A-HT-QLs" firstAttribute="top" secondItem="B3k-ru-vQ7" secondAttribute="bottom" constant="8" id="2yw-s8-n6d"/>

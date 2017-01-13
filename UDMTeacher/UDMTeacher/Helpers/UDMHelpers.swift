@@ -9,6 +9,7 @@ import Foundation
 import XCGLogger
 import ChameleonFramework
 import ReachabilitySwift
+import WowzaGoCoderSDK
 
 let log = XCGLogger.defaultInstance()
 
@@ -83,6 +84,11 @@ final class UDMHelpers {
             return true
         }
         return false
+    }
+    
+    // MARK: Wowza
+    class func settingStream() {
+        
     }
     
     // MARK: Log
@@ -178,12 +184,15 @@ enum FuncName: String {
     case GetCouseDetailLive = "get_live_detail_teacher"
     case GetCourseDetail = "get_my_courses_detail"
     case TurnLive = "turn_live"
+    case GetData = "get"
+    case GetRateList = "get_rate"
 }
 
 // MARK: - Model name
 enum ModelName: String {
     case Course = "courses"
     case Teacher = "teacher"
+    case Curriculums = "curriculums"
 }
 
 // MARK: - Phone Model

@@ -19,5 +19,8 @@ final class CourseDescriptionCell: UITableViewCell, Reusable {
     // MARK: - Inittialzation
     override func awakeFromNib() {
         super.awakeFromNib()
+        if content.text == "" {
+            seeAllBtn.hidden = true
+        }
     }
 }

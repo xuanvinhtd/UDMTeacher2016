@@ -27,8 +27,11 @@ final class ReviewCourseCell: UITableViewCell, Reusable {
         ratingControl.userInteractionEnabled = false
     }
     
-    func initData(from c: Course) {
-        title.text = c.title
-        ratingControl.rating = c.review
+    func initData(from r: Review) {
+        title.text = r.title
+        ratingControl.rating = r.rating
+        reviewer.text = r.userName
+        date.text = r.dateRate.formatDateFromString()
+        content.text = r.description
     }
 }

@@ -66,8 +66,7 @@ struct UDMServer {
         }
     }
     
-    func getCourses(completion: Results) {
-        let data = UDMDictionaryBuilder.share.getCourseList(withID: "1")
+    func getList(withData data:[String: String], Andcompletion completion: Results ) {
         self.getListDataFromServer(withData: data) { (data, msg ,success) in
             guard let _data = data["data"] as? [[String: AnyObject]] else {
                 log.error("Not found data.")
@@ -78,16 +77,24 @@ struct UDMServer {
         }
     }
     
+    func getCourses(completion: Results) {
+        let data = UDMDictionaryBuilder.share.getCourseList(withID: "1")
+        self.getList(withData: data, Andcompletion: completion)
+    }
+    
     func getCoursesDetail(withCourseID id: String, completion: Results) {
         let data = UDMDictionaryBuilder.share.getCoursesDetail(with: id)
-        self.getListDataFromServer(withData: data) { (data, msg ,success) in
-            guard let _data = data["data"] as? [[String: AnyObject]] else {
-                log.error("Not found data.")
-                completion(data: [[String: AnyObject]](), msg: "Not found data.", success: false)
-                return
-            }
-            completion(data: _data, msg: msg, success: success)
-        }
+        self.getList(withData: data, Andcompletion: completion)
+    }
+    
+    func getCurriculumns(withCourseID id: String, completion: Results) {
+        let data = UDMDictionaryBuilder.share.getCurriculums(with: id)
+        self.getList(withData: data, Andcompletion: completion)
+    }
+    
+    func getReviews(withCourseID id: String, completion: Results) {
+        let data = UDMDictionaryBuilder.share.getRateList(withCourseId: id)
+        self.getList(withData: data, Andcompletion: completion)
     }
     
     func turnStream(withCoures id: String, state: String, completion: Results) {

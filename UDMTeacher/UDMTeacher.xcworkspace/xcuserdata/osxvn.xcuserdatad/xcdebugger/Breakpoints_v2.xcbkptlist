@@ -9,13 +9,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UDMTeacher/ViewController/CourseDetailViewController.swift"
-            timestampString = "504468570.431145"
+            filePath = "UDMTeacher/Views/Cells/VideoListCell.swift"
+            timestampString = "504546093.04666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "initData(withCourseID:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UDMTeacher/Views/Cells/VideoListCell.swift"
+            timestampString = "504546095.550695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "initData(withCourseID:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UDMTeacher/ViewController/CourseDetailViewController.swift"
-            timestampString = "504468570.431145"
+            timestampString = "504546273.278227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -41,14 +57,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UDMTeacher/ViewController/CourseDetailViewController.swift"
-            timestampString = "504468570.431145"
+            filePath = "UDMTeacher/Views/Cells/VideoListCell.swift"
+            timestampString = "504546306.414226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "initData(withCourseID:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UDMTeacher.VideoListCell.initData (withCourseID : Swift.String) -&gt; ()"
+                  moduleName = "UDMTeacher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/osxvn/Desktop/GitHub2016/UDMTeacher/UDMTeacher/Views/Cells/VideoListCell.swift"
+                  timestampString = "504546373.523056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UDMTeacher.VideoListCell.(initData (withCourseID : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "UDMTeacher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/osxvn/Desktop/GitHub2016/UDMTeacher/UDMTeacher/Views/Cells/VideoListCell.swift"
+                  timestampString = "504546373.523167"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "45">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,29 +105,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UDMTeacher/ViewController/CourseDetailViewController.swift"
-            timestampString = "504468570.431145"
+            filePath = "UDMTeacher/Views/Cells/CourseDescriptionCell.swift"
+            timestampString = "504546762.246033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UDMTeacher/ViewController/CourseDetailViewController.swift"
-            timestampString = "504468570.431145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "awakeFromNib()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

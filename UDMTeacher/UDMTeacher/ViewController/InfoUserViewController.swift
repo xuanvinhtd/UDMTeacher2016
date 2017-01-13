@@ -13,11 +13,13 @@ final class InfoUserViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var avata: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameUser: UILabel!
     
     private var arrSetting: [String: String?] = [:]
     
     override func initData() {
         arrSetting = UserManager.share.getInfos()
+        nameUser.text = UserManager.share.info.fullName
         tableView.reloadData()
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {

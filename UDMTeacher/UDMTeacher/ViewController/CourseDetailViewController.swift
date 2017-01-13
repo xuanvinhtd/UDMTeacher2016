@@ -99,12 +99,15 @@ extension CourseDetailViewController: UITableViewDataSource {
             return cell
         case SectionIndex.Description.rawValue:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath) as CourseDescriptionCell
+            cell.content.text = "Lập trình iOS Swift từ Zero đến THÀNH THẠO qua 15 ứng dụng thực tế"
             return cell
         case SectionIndex.VideoList.rawValue:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath) as VideoListCell
+            cell.initData(withCourseID: course.id)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath) as ReviewsCell
+            cell.initData(withCourseID: course.id)
             return cell
         }
     }

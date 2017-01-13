@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Courses View Controller-->
@@ -55,9 +56,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sbB-eh-glW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sbB-eh-glW">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="uX6-Y0-5o0" id="qK3-r7-rdT"/>
                                     <outlet property="delegate" destination="uX6-Y0-5o0" id="nIV-Q6-6W5"/>
@@ -319,8 +320,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zup-em-Cyi">
                                 <rect key="frame" x="0.0" y="64" width="600" height="177"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-hj-cAX">
+                                        <rect key="frame" x="300" y="145" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagedefault" translatesAutoresizingMaskIntoConstraints="NO" id="cb4-XT-owy" userLabel="Image Avata">
-                                        <rect key="frame" x="235" y="17" width="130" height="130"/>
+                                        <rect key="frame" x="235" y="7" width="130" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="DOC-y3-GmR"/>
                                             <constraint firstAttribute="height" constant="130" id="xUW-5S-LIJ"/>
@@ -330,7 +337,9 @@
                                 <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="cb4-XT-owy" firstAttribute="centerX" secondItem="zup-em-Cyi" secondAttribute="centerX" id="9J1-rN-5al"/>
-                                    <constraint firstAttribute="bottom" secondItem="cb4-XT-owy" secondAttribute="bottom" constant="30" id="H0E-TG-K3w"/>
+                                    <constraint firstAttribute="bottom" secondItem="cb4-XT-owy" secondAttribute="bottom" constant="40" id="H0E-TG-K3w"/>
+                                    <constraint firstItem="aAR-hj-cAX" firstAttribute="centerX" secondItem="cb4-XT-owy" secondAttribute="centerX" id="Q7l-EZ-MVr"/>
+                                    <constraint firstItem="aAR-hj-cAX" firstAttribute="top" secondItem="cb4-XT-owy" secondAttribute="bottom" constant="8" id="VJd-yt-MPk"/>
                                     <constraint firstAttribute="height" constant="177" id="izD-7t-xKP"/>
                                 </constraints>
                             </view>
@@ -391,6 +400,7 @@
                     <navigationItem key="navigationItem" id="cc2-NG-zmb"/>
                     <connections>
                         <outlet property="avata" destination="cb4-XT-owy" id="wq1-dk-WCL"/>
+                        <outlet property="nameUser" destination="aAR-hj-cAX" id="OKs-b6-Fde"/>
                         <outlet property="tableView" destination="M9k-vg-GQF" id="JUz-pW-bRi"/>
                     </connections>
                 </viewController>
@@ -398,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="1588" y="400"/>
         </scene>
-        <!--Stream Video View Controller-->
+        <!--View Controller-->
         <scene sceneID="6PH-wc-UjM">
             <objects>
-                <viewController storyboardIdentifier="StreamVideoViewControllerID" id="q13-l2-zlt" customClass="StreamVideoViewController" customModule="UDMTeacher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q13-l2-zlt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qDB-rb-uga"/>
                         <viewControllerLayoutGuide type="bottom" id="psb-Ps-aZt"/>
@@ -453,6 +463,100 @@
             </objects>
             <point key="canvasLocation" x="2952" y="372"/>
         </scene>
+        <!--Stream Video View Controller-->
+        <scene sceneID="ayJ-bg-8Zx">
+            <objects>
+                <viewController storyboardIdentifier="StreamVideoViewControllerID" id="Qkh-b5-aDE" customClass="StreamVideoViewController" customModule="UDMTeacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NFo-Wi-zUX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BDk-9h-OPn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uLm-QQ-PrG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQA-WC-8JP">
+                                <rect key="frame" x="263" y="505" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="XrP-vX-tGG"/>
+                                    <constraint firstAttribute="height" constant="75" id="eKP-tK-ukP"/>
+                                </constraints>
+                                <state key="normal" image="start_button"/>
+                                <connections>
+                                    <action selector="didTapBroadcastButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="12T-C7-s3n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-6F-hwm">
+                                <rect key="frame" x="535" y="520" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Zek-02-FcY"/>
+                                    <constraint firstAttribute="height" constant="45" id="dXe-CL-M2P"/>
+                                </constraints>
+                                <state key="normal" image="settings_button"/>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="dUp-AQ-BVl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7j-gO-39K" userLabel="Switch Camera Button">
+                                <rect key="frame" x="25" y="520" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0MQ-CG-ZOd"/>
+                                    <constraint firstAttribute="width" constant="45" id="oko-l9-rjZ"/>
+                                </constraints>
+                                <state key="normal" image="switch_camera_button"/>
+                                <connections>
+                                    <action selector="didTapSwitchCameraButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="KW0-1c-ewV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai6-p5-ykT" userLabel="Torch Button">
+                                <rect key="frame" x="25" y="35" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="57n-Q3-Nip"/>
+                                    <constraint firstAttribute="height" constant="45" id="7r8-Rv-N2W"/>
+                                </constraints>
+                                <state key="normal" image="torch_on_button"/>
+                                <connections>
+                                    <action selector="didTapTorchButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="JIb-jp-hLP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-fD-4Su" userLabel="Mic Button">
+                                <rect key="frame" x="70" y="35" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ARi-8m-Gcs"/>
+                                    <constraint firstAttribute="width" constant="45" id="TeA-2e-Ltg"/>
+                                </constraints>
+                                <state key="normal" image="mic_on_button"/>
+                                <connections>
+                                    <action selector="didTapMicButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="Kia-NJ-XUK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36470588240000001" green="0.37647058820000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aqY-fD-4Su" firstAttribute="leading" secondItem="ai6-p5-ykT" secondAttribute="trailing" id="07m-yi-lSu"/>
+                            <constraint firstItem="aqY-fD-4Su" firstAttribute="centerY" secondItem="ai6-p5-ykT" secondAttribute="centerY" id="2D9-FM-cfR"/>
+                            <constraint firstItem="b7j-gO-39K" firstAttribute="centerY" secondItem="kQA-WC-8JP" secondAttribute="centerY" id="2ZO-6l-kNn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="b7j-gO-39K" secondAttribute="leading" constant="-5" id="Bxo-7V-jcy"/>
+                            <constraint firstItem="ai6-p5-ykT" firstAttribute="top" secondItem="NFo-Wi-zUX" secondAttribute="bottom" constant="15" id="CJv-AA-wB1"/>
+                            <constraint firstItem="BDk-9h-OPn" firstAttribute="top" secondItem="kQA-WC-8JP" secondAttribute="bottom" constant="20" id="KQp-Wi-x0q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fdj-6F-hwm" secondAttribute="trailing" id="PAL-8f-hnJ"/>
+                            <constraint firstItem="ai6-p5-ykT" firstAttribute="centerX" secondItem="b7j-gO-39K" secondAttribute="centerX" id="PaG-Z2-7R7"/>
+                            <constraint firstItem="Fdj-6F-hwm" firstAttribute="centerY" secondItem="kQA-WC-8JP" secondAttribute="centerY" id="SF9-FD-Gvv"/>
+                            <constraint firstItem="kQA-WC-8JP" firstAttribute="centerX" secondItem="uLm-QQ-PrG" secondAttribute="centerX" id="b5C-Lr-EgT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="broadcastButton" destination="kQA-WC-8JP" id="DWw-bC-Yfa"/>
+                        <outlet property="micButton" destination="aqY-fD-4Su" id="2B9-Sz-Ey7"/>
+                        <outlet property="settingsButton" destination="Fdj-6F-hwm" id="vy1-HC-Gxn"/>
+                        <outlet property="switchCameraButton" destination="b7j-gO-39K" id="Xst-ri-Vjc"/>
+                        <outlet property="torchButton" destination="ai6-p5-ykT" id="TwH-vZ-KSs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKj-pk-Hzz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="1066"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Email" width="25" height="25"/>
@@ -460,5 +564,10 @@
         <image name="Password" width="24" height="24"/>
         <image name="UserTabBar" width="24" height="24"/>
         <image name="VideoListTabBar" width="25" height="25"/>
+        <image name="mic_on_button" width="45" height="45"/>
+        <image name="settings_button" width="45" height="45"/>
+        <image name="start_button" width="75" height="75"/>
+        <image name="switch_camera_button" width="45" height="45"/>
+        <image name="torch_on_button" width="45" height="45"/>
     </resources>
 </document>

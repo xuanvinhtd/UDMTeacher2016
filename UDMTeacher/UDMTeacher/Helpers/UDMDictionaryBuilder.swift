@@ -131,4 +131,24 @@ struct UDMDictionaryBuilder {
         result.update(commonDictionary)
         return result
     }
+    
+    func getRateList(withCourseId id: String) -> [String: String] {
+        
+        return builderCourse(withModel: ModelName.Course.rawValue,
+                             funcName: FuncName.GetRateList.rawValue,
+                             token: UserManager.share.info.token,
+                             idCategory: nil, courseID: id,
+                             limit: nil,
+                             offset: nil)
+    }
+    
+    // MARK: - Model Curriculums
+    func getCurriculums(with courseID: String?) -> [String: String] {
+        return builderCourse(withModel: ModelName.Curriculums.rawValue,
+                             funcName: FuncName.GetData.rawValue,
+                             token: UserManager.share.info.token,
+                             idCategory: nil, courseID: courseID,
+                             limit: nil,
+                             offset: nil)
+    }
 }
