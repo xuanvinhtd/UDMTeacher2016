@@ -8,27 +8,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCourseCell" rowHeight="321" id="9C8-Qa-JH8" customClass="VideoCourseCell" customModule="UDMTeacher" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="640" height="321"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCourseCell" rowHeight="444" id="9C8-Qa-JH8" customClass="VideoCourseCell" customModule="UDMTeacher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="444"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9C8-Qa-JH8" id="pO5-oV-ooh">
-                <rect key="frame" x="0.0" y="0.0" width="640" height="320"/>
+                <rect key="frame" x="0.0" y="0.0" width="640" height="443"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagedefault" translatesAutoresizingMaskIntoConstraints="NO" id="JzL-PW-ML1">
-                        <rect key="frame" x="0.0" y="0.0" width="640" height="180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="300"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="180" id="FPg-2P-Uul"/>
+                            <constraint firstAttribute="height" constant="300" id="FPg-2P-Uul"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldv-YB-3uK">
-                        <rect key="frame" x="8" y="212" width="47" height="23"/>
+                        <rect key="frame" x="8" y="332" width="47" height="23"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QG-Zf-UuG" customClass="CosmosView" customModule="Cosmos">
-                        <rect key="frame" x="8" y="243" width="140" height="26"/>
+                        <rect key="frame" x="8" y="363" width="140" height="29"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
@@ -49,17 +49,17 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrg-ID-Fjg">
-                        <rect key="frame" x="8" y="284" width="29" height="21"/>
+                        <rect key="frame" x="8" y="407" width="29" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVg-91-oj1">
-                        <rect key="frame" x="600" y="280" width="25" height="25"/>
+                        <rect key="frame" x="575" y="378" width="50" height="50"/>
                         <state key="normal" image="IconStream"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iap-Dv-VTL">
-                        <rect key="frame" x="8" y="188" width="33" height="16"/>
+                        <rect key="frame" x="8" y="308" width="33" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.68888300660000001" green="0.71366006140000005" blue="0.73448425530000006" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -92,11 +92,11 @@
                 <outlet property="teacherName" destination="iap-Dv-VTL" id="Yac-yF-yfV"/>
                 <outlet property="title" destination="ldv-YB-3uK" id="QvX-WD-gsL"/>
             </connections>
-            <point key="canvasLocation" x="458" y="416.5"/>
+            <point key="canvasLocation" x="458" y="478"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="IconStream" width="25" height="25"/>
+        <image name="IconStream" width="50" height="50"/>
         <image name="Imagedefault" width="311" height="207"/>
     </resources>
 </document>

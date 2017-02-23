@@ -29,6 +29,34 @@ final class UDMAlert {
         }
     }
     
+    class func alertChoose(title title: String, message: String, AcceptTitle: String, CancelTitle: String, inViewController viewController: UIViewController?, withDismissAction dismissAction: ((result: Bool) -> Void)?) {
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            
+            let action: UIAlertAction = UIAlertAction(title: AcceptTitle, style: .Default, handler: { action in
+                guard let dismissAction = dismissAction else {
+                    log.error("Not found action of Alert!")
+                    return
+                }
+                dismissAction(result: true)
+            })
+            
+            let actionCancel: UIAlertAction = UIAlertAction(title: CancelTitle, style: .Cancel, handler: { action in
+                guard let dismissAction = dismissAction else {
+                    log.error("Not found action of Alert!")
+                    return
+                }
+                dismissAction(result: false)
+            })
+            
+            alertController.addAction(action)
+            alertController.addAction(actionCancel)
+            viewController?.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
     class func alertSorry(message message: String?, inViewController viewController: UIViewController?, withDismissAction dismissAction: () -> Void) {
         
         alert(title: NSLocalizedString("Sorry", comment: ""), message: message!, dismissTitle: NSLocalizedString("OK", comment: ""), inViewController: viewController, withDismissAction: dismissAction)

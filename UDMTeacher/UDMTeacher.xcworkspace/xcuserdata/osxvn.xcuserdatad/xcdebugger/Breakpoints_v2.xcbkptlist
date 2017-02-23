@@ -41,22 +41,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UDMTeacher/ViewController/CourseDetailViewController.swift"
-            timestampString = "504546273.278227"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "UDMTeacher/Views/Cells/VideoListCell.swift"
             timestampString = "504546306.414226"
             startingColumnNumber = "9223372036854775807"
@@ -105,14 +89,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UDMTeacher/Views/Cells/CourseDescriptionCell.swift"
-            timestampString = "504546762.246033"
+            filePath = "UDMTeacher/ViewController/StreamVideoViewController.swift"
+            timestampString = "509555983.510952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UDMTeacher.StreamVideoViewController.viewDidAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "UDMTeacher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/osxvn/Documents/UDMTeacher2016/UDMTeacher/UDMTeacher/ViewController/StreamVideoViewController.swift"
+                  timestampString = "509380609.628974"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UDMTeacher.StreamVideoViewController.viewDidAppear (Swift.Bool) -&gt; ()"
+                  moduleName = "UDMTeacher"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/osxvn/Documents/UDMTeacher2016/UDMTeacher/UDMTeacher/ViewController/StreamVideoViewController.swift"
+                  timestampString = "509380609.62908"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

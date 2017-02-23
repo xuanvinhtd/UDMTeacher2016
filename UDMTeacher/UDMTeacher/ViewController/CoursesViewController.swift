@@ -11,6 +11,8 @@ import UIKit
 final class CoursesViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl: UIRefreshControl!
+    
     var courses = [Course]()
     
     private var notifyReloadPage: AnyObject!
@@ -26,10 +28,16 @@ final class CoursesViewController: UIViewController {
                 UDMAlert.alert(title: "Cannot Get Data", message: msg, dismissTitle: "OK", inViewController: self, withDismissAction: nil)
                 log.error("ERROR: \(msg)")
             }
+            self.refreshControl.endRefreshing()
         }
     }
     
     override func configItems() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(CoursesViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl) // not required when using UITableViewController
+
         tableView.tableFooterView = UIView()
         tableView.registerReusableCell(CourseCell.self)
         tableView.contentInset = UIEdgeInsetsZero
@@ -85,6 +93,11 @@ final class CoursesViewController: UIViewController {
     override func deregisterNotification() {
         NSNotificationCenter.defaultCenter().removeObserver(notifyReloadPage)
         NSNotificationCenter.defaultCenter().removeObserver(notifyDisconnectInternet)
+    }
+    
+    // Refresh
+    func refresh(sender:AnyObject) {
+        initData()
     }
 }
 

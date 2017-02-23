@@ -605,7 +605,7 @@
 				);
 				INFOPLIST_FILE = UDMTeacher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xuanvinhtd.UDMTeacher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.education.teachervnu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UDMTeacher/UDMTeacher-Bridging-Header.h";
@@ -627,7 +627,7 @@
 				);
 				INFOPLIST_FILE = UDMTeacher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xuanvinhtd.UDMTeacher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.education.teachervnu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UDMTeacher/UDMTeacher-Bridging-Header.h";

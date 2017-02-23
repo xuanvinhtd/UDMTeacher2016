@@ -13,7 +13,7 @@ final class StreamVideoViewController: UIViewController {
 // MARK: - Properties
     
     let SDKSampleSavedConfigKey = "SDKSampleSavedConfigKey"
-    let SDKSampleAppLicenseKey = "GOSK-3643-0103-1B8B-C7F8-9A04"
+    let SDKSampleAppLicenseKey = "GOSK-6043-0103-FEF1-44B3-1E78"
     let BlackAndWhiteEffectKey = "BlackAndWhiteKey"
     
     @IBOutlet weak var broadcastButton:UIButton!
@@ -21,6 +21,7 @@ final class StreamVideoViewController: UIViewController {
     @IBOutlet weak var switchCameraButton:UIButton!
     @IBOutlet weak var torchButton:UIButton!
     @IBOutlet weak var micButton:UIButton!
+    @IBOutlet weak var timeStream: UILabel!
     
     var streamName = "DefaultName"
     var coursesID = "1"
@@ -55,12 +56,12 @@ final class StreamVideoViewController: UIViewController {
             goCoderConfig = WowzaConfig()
         }
         
-        goCoderConfig.hostAddress = "61.28.226.35"
+        goCoderConfig.hostAddress = "61.28.226.74"
         goCoderConfig.portNumber = 1935
-        goCoderConfig.applicationName = "live"
+        goCoderConfig.applicationName = "liveStream"
         goCoderConfig.streamName = streamName
         goCoderConfig.username = "teacher"
-        goCoderConfig.password = "#teacher"
+        goCoderConfig.password = "123456"
         
         //wz = Wowza.initWithConfig(&goCoderConfig)
         
@@ -128,7 +129,7 @@ final class StreamVideoViewController: UIViewController {
                     WowzaGoCoder.requestPermissionForType(WowzaGoCoderPermissionType.Microphone, response: { (permission) in
                         log.info("Camera permission is: \(permission == WowzaGoCoderCapturePermission.Authorized ? "authorized" : "denied")")
                     })
-                    
+                
                     self.goCoder?.registerAudioSink(self as WZAudioSink)
                     self.goCoder?.registerVideoSink(self as WZVideoSink)
                     self.goCoder?.config = self.goCoderConfig
@@ -140,7 +141,7 @@ final class StreamVideoViewController: UIViewController {
                     self.goCoder?.cameraPreview?.startPreview()
                 }
                 
-                self.updateUIControls()
+               // self.updateUIControls()
                 
             }
         }
@@ -148,13 +149,13 @@ final class StreamVideoViewController: UIViewController {
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        UDMServer.share.turnStream(withCoures: coursesID, state: "0") { (data, msg, success) in
-            if success {
-                log.info("Turn Off Stream success!")
-            } else {
-                log.error("Turn Off Stream faild: \(msg)")
-            }
-        }
+       //        UDMServer.share.turnStream(withCoures: coursesID, state: "0") { (data, msg, success) in
+//            if success {
+//                log.info("Turn Off Stream success!")
+//            } else {
+//                log.error("Turn Off Stream faild: \(msg)")
+//            }
+//        }
     }
     
     
@@ -170,11 +171,37 @@ final class StreamVideoViewController: UIViewController {
             })
         }
         else {
+            if goCoder?.status.state == WZState.Running {
+                UDMAlert.alertChoose(title: "Warring", message: "Are you sure stop stream?" , AcceptTitle: "OK", CancelTitle: "Cancel",inViewController: self, withDismissAction: { result in
+                    if result {
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.broadcastButton.enabled    = false
+                            self.torchButton.enabled        = false
+                            self.switchCameraButton.enabled = false
+                            self.settingsButton.enabled     = true
+                            
+                            if self.goCoder?.status.state == WZState.Running {
+                                self.goCoder?.endStreaming(self)
+                            }
+                            else {
+                                self.receivedGoCoderEventCodes.removeAll()
+                                self.goCoder?.startStreaming(self)
+                                let audioMuted = self.goCoder?.audioMuted ?? false
+                                self.micButton.setImage(UIImage(named: audioMuted ? "mic_off_button" : "mic_on_button"), forState: UIControlState.Normal)
+                            }
+
+                        })
+                        return
+                    } else {
+                        
+                    }
+                })
+            } else {
             // Disable the U/I controls
             self.broadcastButton.enabled    = false
             torchButton.enabled        = false
             switchCameraButton.enabled = false
-            settingsButton.enabled     = false
+            settingsButton.enabled     = true
             
             if goCoder?.status.state == WZState.Running {
                 goCoder?.endStreaming(self)
@@ -185,15 +212,15 @@ final class StreamVideoViewController: UIViewController {
                 let audioMuted = goCoder?.audioMuted ?? false
                 micButton.setImage(UIImage(named: audioMuted ? "mic_off_button" : "mic_on_button"), forState: UIControlState.Normal)
             }
+            }
         }
     }
     
     @IBAction func didTapSwitchCameraButton(sender:AnyObject?) {
         if let otherCamera = goCoder?.cameraPreview?.otherCamera() {
             if !otherCamera.supportsWidth(goCoderConfig.videoWidth) {
-//                goCoderConfig.
-//                goCoderConfig.load(otherCamera.supportedPresetConfigs.last!.toPreset())
-//                goCoder?.config = goCoderConfig
+            goCoderConfig.loadPreset(otherCamera.supportedPresetConfigs.last!.toPreset())
+                goCoder?.config = goCoderConfig
             }
             
             goCoder?.cameraPreview?.switchCamera()
@@ -217,19 +244,24 @@ final class StreamVideoViewController: UIViewController {
     }
     
     @IBAction func didTapSettingsButton(sender:AnyObject?) {
-//        if let settingsNavigationController = UIStoryboard(name: "GoCoderSettings", bundle: nil).instantiateViewController(withIdentifier: "settingsNavigationController") as? UINavigationController {
-//            
-//            if let settingsViewController = settingsNavigationController.topViewController as? SettingsViewController {
-//                settingsViewController.addAllSections()
-//                settingsViewController.removeDisplay(.recordVideoLocally)
-//                settingsViewController.removeDisplay(.backgroundMode)
-//                let viewModel = SettingsViewModel(sessionConfig: goCoderConfig)
-//                viewModel?.supportedPresetConfigs = goCoder?.cameraPreview?.camera?.supportedPresetConfigs
-//                settingsViewController.viewModel = viewModel!
+        
+        self.goCoder?.endStreaming(self)
+        self.goCoder?.unregisterAudioSink(self as WZAudioSink)
+        self.goCoder?.unregisterVideoSink(self as WZVideoSink)
+        self.goCoder?.cameraPreview?.stopPreview()
+        self.goCoder = nil
+
+        dispatch_async(dispatch_get_main_queue(), {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
+//        UDMServer.share.turnStream(withCoures: self.coursesID, state: "0") { (data, msg, success) in
+//            if success {
+//                log.info("Turn Off Stream success!")
+//                self.goCoder?.endStreaming(self)
+//               
+//            } else {
+//                log.error("Turn Off Stream faild: \(msg)")
 //            }
-//            
-//            
-//            self.present(settingsNavigationController, animated: true, completion: nil)
 //        }
     }
     
@@ -241,7 +273,7 @@ final class StreamVideoViewController: UIViewController {
             self.torchButton.enabled        = false
             self.switchCameraButton.enabled = false
             self.settingsButton.enabled     = false
-            self.micButton.enabled           = true
+            self.micButton.enabled          = true
             self.micButton.enabled          = false
         }
         else {
@@ -258,28 +290,81 @@ final class StreamVideoViewController: UIViewController {
             self.micButton.enabled           = !self.micButton.enabled
         }
     }
+    
+    var timer = NSTimer() //make a timer variable, but don't do anything yet
+    let timeInterval:NSTimeInterval = 1.0 //smaller interval
+    let timerEnd:NSTimeInterval =  1800.0 //seconds to end the timer
+    var timeCount:NSTimeInterval = 0.0 // counter for the timer
+    
+    //MARK: - Timer
+    
+    func timeString(time:NSTimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = time - Double(minutes) * 60
+        let hours = Int(minutes) / 60
+        return String(format:"%02i:%02i:%02i",Int(hours),minutes,Int(seconds))
+    }
+    
+    func timerDidEnd(timer:NSTimer){
+            //timer that counts up
+            timeCount = timeCount + timeInterval
+            if timeCount >= timerEnd{  //test for target time reached.
+                timer.invalidate()
+            } else { //update the time on the clock if not reached
+                timeStream.text = timeString(timeCount)
+            }
+        }
+    
+    func resetTime() {
+        timer.invalidate()
+        timeCount = 0.0
+        timeStream.text = timeString(timeCount)
+    }
 }
 
 // MARK: - WZStatusCallback Protocol Instance Methods
 extension StreamVideoViewController: WZStatusCallback, WZVideoSink, WZAudioSink {
     func onWZStatus(status: WZStatus!) {
-//        switch (status.state) {
-//        case WZState.idle:
-//            dispatch_async(dispatch_get_main_queue(), { 
-//              //  self.broadcastButton.setImage(UIImage(named: "start_button"), for: UIControlState())
-//              //  self.updateUIControls()
-//            })
-//            
-//        case WZState.running:
-//            dispatch_async(dispatch_get_main_queue(), {
-//               // self.broadcastButton.setImage(UIImage(named: "stop_button"), for: UIControlState())
-//               // self.updateUIControls()
-//            })
-//        case WZState.stopping, WZState.starting:
-//            dispatch_async(dispatch_get_main_queue(), {
-//                //self.updateUIControls()
-//            })
-//        }
+        switch (status.state) {
+        case WZState.Idle:
+            log.info("-->  WZState.Idle")
+            dispatch_async(dispatch_get_main_queue(), {
+                self.broadcastButton.setImage(UIImage(named:"start_button"), forState: UIControlState.Normal)
+                self.settingsButton.hidden = false
+                //self.updateUIControls()
+            })
+            
+        case WZState.Running:
+            log.info("-->  WZState.Running")
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(timeInterval, target: self, selector: #selector(StreamVideoViewController.timerDidEnd(_:)), userInfo: nil, repeats: true)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.broadcastButton.setImage(UIImage(named:"stop_button"), forState: UIControlState.Normal)
+                self.broadcastButton.enabled    = true
+                self.settingsButton.hidden = true
+                //self.updateUIControls()
+            })
+        case WZState.Starting:
+            log.info("-->  WZState.Starting")
+            /*dispatch_async(dispatch_get_main_queue(), {
+                self.updateUIControls()
+            })*/
+        case WZState.Stopping:
+            log.info("-->  WZState.Stopping")
+            self.resetTime()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.broadcastButton.setImage(UIImage(named:"start_button"), forState: UIControlState.Normal)
+                self.broadcastButton.enabled = true;
+                self.settingsButton.hidden = false
+                //self.updateUIControls()
+//                UDMServer.share.turnStream(withCoures: self.coursesID, state: "0") { (data, msg, success) in
+//                    if success {
+//                        log.info("Turn Off Stream success!")
+//                    } else {
+//                        log.error("Turn Off Stream faild: \(msg)")
+//                    }
+//                }
+            })
+        }
         
     }
     
@@ -288,20 +373,24 @@ extension StreamVideoViewController: WZStatusCallback, WZVideoSink, WZAudioSink 
         // but only if we haven't already shown an alert for this event
         
         dispatch_async(dispatch_get_main_queue(), {
-//            if !self.receivedGoCoderEventCodes.contains(status.event) {
-//                self.receivedGoCoderEventCodes.append(status.event)
-//                self.showAlert("Live Streaming Event", status: status)
-//            }
-//            
-//            self.updateUIControls()
+            if !self.receivedGoCoderEventCodes.contains(status.event) {
+                self.receivedGoCoderEventCodes.append(status.event)
+                UDMAlert.alert(title: "Incomplete Streaming Settings", message: "Live Streaming Event" , dismissTitle: "OK", inViewController: self, withDismissAction: {
+                    
+                })
+            }
+            
+           // self.updateUIControls()
         })
     }
     
     func onWZError(status: WZStatus!) {
         // If an error is reported by the GoCoder SDK, display an alert dialog containing the error details
         dispatch_async(dispatch_get_main_queue(), {
-           // self.showAlert("Live Streaming Error", status: status)
-          //  self.updateUIControls()
+            UDMAlert.alert(title: "Incomplete Streaming Settings", message: "Live Streaming Error" , dismissTitle: "OK", inViewController: self, withDismissAction: {
+                
+            })
+           // self.updateUIControls()
         })
     }
     

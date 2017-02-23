@@ -29,7 +29,7 @@ struct Course {
         self.title = data["title"] as? String ?? ""
         self.author = data["author"] as? String ?? ""
         self.authorID = data["authorID"] as? String ?? ""
-        self.descriptions = data["idescriptionsd"] as? String ?? ""
+        self.descriptions = data["description"] as? String ?? ""
         self.oldPrice = data["oldPrice"] as? String ?? ""
         self.newPrice = data["newPrice"] as? String ?? ""
         self.thumbnail = data["thumbnail"] as? String ?? ""

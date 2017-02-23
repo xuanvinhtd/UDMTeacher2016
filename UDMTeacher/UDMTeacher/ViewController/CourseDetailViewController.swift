@@ -53,6 +53,11 @@ final class CourseDetailViewController: UIViewController {
         initData()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     // MARK: - Handling event
     func createLiveStream(seden: AnyObject) {
         UDMServer.share.turnStream(withCoures: course.id, state: "1") { (data, msg, success) in
@@ -62,7 +67,7 @@ final class CourseDetailViewController: UIViewController {
                     let stream = StreamVideoViewController.initFromNib() as! StreamVideoViewController
                     stream.coursesID = self.course.id
                     stream.streamName = _data["liveName"] as? String ?? "STREAMNAMEDEFAULT"
-                    self.navigationController?.pushViewController(stream, animated: true)
+                    self.presentViewController(stream, animated: true, completion: nil)
                 }
             } else {
                 UDMAlert.alert(title: "Error Live", message: msg , dismissTitle: "OK", inViewController: self, withDismissAction: nil)
@@ -99,7 +104,7 @@ extension CourseDetailViewController: UITableViewDataSource {
             return cell
         case SectionIndex.Description.rawValue:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath) as CourseDescriptionCell
-            cell.content.text = "Lập trình iOS Swift từ Zero đến THÀNH THẠO qua 15 ứng dụng thực tế"
+            cell.initData(withString: course.descriptions)
             return cell
         case SectionIndex.VideoList.rawValue:
             let cell = tableView.dequeueReusableCell(indexPath: indexPath) as VideoListCell

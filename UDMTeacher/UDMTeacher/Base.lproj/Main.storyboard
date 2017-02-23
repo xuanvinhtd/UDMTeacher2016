@@ -155,7 +155,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bk-9h-VPw" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="-10" width="600" height="393"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="boygalaxy1096@gmail.com" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-rj-b1P">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="teacher@gmail.com" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHe-rj-b1P">
                                                 <rect key="frame" x="66" y="125" width="509" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="aqU-EO-RJj"/>
@@ -486,18 +486,7 @@
                                     <action selector="didTapBroadcastButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="12T-C7-s3n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-6F-hwm">
-                                <rect key="frame" x="535" y="520" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="Zek-02-FcY"/>
-                                    <constraint firstAttribute="height" constant="45" id="dXe-CL-M2P"/>
-                                </constraints>
-                                <state key="normal" image="settings_button"/>
-                                <connections>
-                                    <action selector="didTapSettingsButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="dUp-AQ-BVl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7j-gO-39K" userLabel="Switch Camera Button">
+                            <button hidden="YES" opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7j-gO-39K" userLabel="Switch Camera Button">
                                 <rect key="frame" x="25" y="520" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="0MQ-CG-ZOd"/>
@@ -508,7 +497,7 @@
                                     <action selector="didTapSwitchCameraButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="KW0-1c-ewV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai6-p5-ykT" userLabel="Torch Button">
+                            <button hidden="YES" opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai6-p5-ykT" userLabel="Torch Button">
                                 <rect key="frame" x="25" y="35" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="57n-Q3-Nip"/>
@@ -519,7 +508,7 @@
                                     <action selector="didTapTorchButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="JIb-jp-hLP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-fD-4Su" userLabel="Mic Button">
+                            <button hidden="YES" opaque="NO" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-fD-4Su" userLabel="Mic Button">
                                 <rect key="frame" x="70" y="35" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ARi-8m-Gcs"/>
@@ -530,19 +519,34 @@
                                     <action selector="didTapMicButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="Kia-NJ-XUK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdj-6F-hwm">
+                                <rect key="frame" x="550" y="25" width="45" height="45"/>
+                                <state key="normal" image="Close_button"/>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="Qkh-b5-aDE" eventType="touchUpInside" id="dUp-AQ-BVl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoV-bf-abJ">
+                                <rect key="frame" x="20" y="562" width="64" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.36470588240000001" green="0.37647058820000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aqY-fD-4Su" firstAttribute="leading" secondItem="ai6-p5-ykT" secondAttribute="trailing" id="07m-yi-lSu"/>
                             <constraint firstItem="aqY-fD-4Su" firstAttribute="centerY" secondItem="ai6-p5-ykT" secondAttribute="centerY" id="2D9-FM-cfR"/>
                             <constraint firstItem="b7j-gO-39K" firstAttribute="centerY" secondItem="kQA-WC-8JP" secondAttribute="centerY" id="2ZO-6l-kNn"/>
+                            <constraint firstItem="BDk-9h-OPn" firstAttribute="top" secondItem="WoV-bf-abJ" secondAttribute="bottom" constant="20" id="3DK-MC-gh6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="b7j-gO-39K" secondAttribute="leading" constant="-5" id="Bxo-7V-jcy"/>
                             <constraint firstItem="ai6-p5-ykT" firstAttribute="top" secondItem="NFo-Wi-zUX" secondAttribute="bottom" constant="15" id="CJv-AA-wB1"/>
                             <constraint firstItem="BDk-9h-OPn" firstAttribute="top" secondItem="kQA-WC-8JP" secondAttribute="bottom" constant="20" id="KQp-Wi-x0q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fdj-6F-hwm" secondAttribute="trailing" id="PAL-8f-hnJ"/>
                             <constraint firstItem="ai6-p5-ykT" firstAttribute="centerX" secondItem="b7j-gO-39K" secondAttribute="centerX" id="PaG-Z2-7R7"/>
-                            <constraint firstItem="Fdj-6F-hwm" firstAttribute="centerY" secondItem="kQA-WC-8JP" secondAttribute="centerY" id="SF9-FD-Gvv"/>
                             <constraint firstItem="kQA-WC-8JP" firstAttribute="centerX" secondItem="uLm-QQ-PrG" secondAttribute="centerX" id="b5C-Lr-EgT"/>
+                            <constraint firstItem="WoV-bf-abJ" firstAttribute="leading" secondItem="uLm-QQ-PrG" secondAttribute="leading" constant="20" id="td2-K8-8QC"/>
+                            <constraint firstAttribute="trailing" secondItem="Fdj-6F-hwm" secondAttribute="trailing" constant="5" id="u0X-zX-7Yx"/>
+                            <constraint firstItem="Fdj-6F-hwm" firstAttribute="top" secondItem="NFo-Wi-zUX" secondAttribute="bottom" constant="5" id="yoO-oi-d1F"/>
                         </constraints>
                     </view>
                     <connections>
@@ -550,6 +554,7 @@
                         <outlet property="micButton" destination="aqY-fD-4Su" id="2B9-Sz-Ey7"/>
                         <outlet property="settingsButton" destination="Fdj-6F-hwm" id="vy1-HC-Gxn"/>
                         <outlet property="switchCameraButton" destination="b7j-gO-39K" id="Xst-ri-Vjc"/>
+                        <outlet property="timeStream" destination="WoV-bf-abJ" id="v0N-qo-YhQ"/>
                         <outlet property="torchButton" destination="ai6-p5-ykT" id="TwH-vZ-KSs"/>
                     </connections>
                 </viewController>
@@ -559,13 +564,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Close_button" width="45" height="45"/>
         <image name="Email" width="25" height="25"/>
         <image name="Imagedefault" width="311" height="207"/>
         <image name="Password" width="24" height="24"/>
         <image name="UserTabBar" width="24" height="24"/>
         <image name="VideoListTabBar" width="25" height="25"/>
         <image name="mic_on_button" width="45" height="45"/>
-        <image name="settings_button" width="45" height="45"/>
         <image name="start_button" width="75" height="75"/>
         <image name="switch_camera_button" width="45" height="45"/>
         <image name="torch_on_button" width="45" height="45"/>

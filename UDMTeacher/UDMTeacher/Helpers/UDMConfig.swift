@@ -49,7 +49,7 @@ final class UDMConfig {
     }
     
     struct API {
-        static let rootDoman = "http://61.28.226.35:8012"
+        static let rootDoman = "http://61.28.226.74:8012"
         static let doman = "\(rootDoman)/server/api/"
         
         static func buildUrl(withFunc name: String, model: String) -> String {
