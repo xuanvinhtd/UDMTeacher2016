@@ -251,18 +251,20 @@ final class StreamVideoViewController: UIViewController {
         self.goCoder?.cameraPreview?.stopPreview()
         self.goCoder = nil
 
+        UDMServer.share.turnStream(withCoures: self.coursesID, state: "0") { (data, msg, success) in
+            if success {
+                log.info("Turn Off Stream success!")
+                self.goCoder?.endStreaming(self)
+                
+            } else {
+                log.error("Turn Off Stream faild: \(msg)")
+            }
+        }
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.dismissViewControllerAnimated(true, completion: nil)
         })
-//        UDMServer.share.turnStream(withCoures: self.coursesID, state: "0") { (data, msg, success) in
-//            if success {
-//                log.info("Turn Off Stream success!")
-//                self.goCoder?.endStreaming(self)
-//               
-//            } else {
-//                log.error("Turn Off Stream faild: \(msg)")
-//            }
-//        }
+
     }
     
     func updateUIControls() {
